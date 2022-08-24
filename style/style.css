@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "Bad Script";
+  font-weight: 400;
+  src: url("../fonts/bad-script-v16-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("../fonts/bad-script-v16-latin_cyrillic-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  src: url("../fonts/open-sans-v29-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("../fonts/open-sans-v29-latin_cyrillic-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  src: url("../fonts/open-sans-v29-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/open-sans-v29-latin_cyrillic-700.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Open Sans";
+  background-color: #fff1f8;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 0 17px 0;
+}
+
+.woman {
+  background-color: #fff1f8;
+}
+.man {
+  background-color: #eff9fe;
+}
+button {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  padding: 28px 0;
+  background: #ffffff;
+  box-shadow: 0px 1px 20px rgba(72, 3, 38, 0.07);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button-change {
+  width: 300px;
+  height: 65px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  margin-right: 30px;
+}
+
+.header__button-change:last-child {
+  margin-right: 0;
+}
+.woman .header__button-change {
+  background: #c300c7;
+}
+.man .header__button-change {
+  background: #1178b2;
+}
+
+.woman .header__button-change:hover {
+  background: #ffccff;
+  color: black;
+  transition: 0.3s;
+}
+.woman .header__button-change:active {
+  background: #003322;
+}
+.man .header__button-change:hover {
+  background: #9eaffa;
+  color: black;
+  transition: 0.3s;
+}
+.man .header__button-change:active {
+  background: #003322;
+}
+
+.header__button-gender {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px;
+  margin-right: 20px;
+}
+
+.man .header__button-gender_man {
+  border-color: #1178b2;
+}
+
+.woman .header__button-gender_woman {
+  border-color: #c300c7;
+}
+
+.header__button-gender:last-child {
+  margin-right: 0;
+}
+.header__button-gender_man {
+  background-image: url("../img/men-line.svg");
+}
+.header__button-gender_woman {
+  background-image: url("../img/women-line.svg");
+}
+.header__button-gender_man:hover {
+  background-color: #e6e6ff;
+  transition: 0.3s;
+}
+.header__button-gender_man:active {
+  background-color: #fff;
+}
+.header__button-gender_woman:hover {
+  background-color: #f8d2f6;
+  transition: 0.3s;
+}
+.header__button-gender_woman:active {
+  background-color: #fff;
+}
+.card {
+  flex-grow: 1;
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+}
+.card__container {
+  display: flex;
+}
+.card__wrapper {
+  position: relative;
+  margin: auto;
+  display: flex;
+  box-shadow: 0px 0px 50px rgba(96, 4, 50, 0.23);
+  font-size: 3px;
+}
+.card__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: max(3em, min(calc(100vw * 3 / 140), 6em));
+  font-family: "Bad Script";
+  line-height: 1.6;
+}
+
+.woman .card__text {
+  font-family: "Bad Script";
+}
+
+.man .card__text {
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.info-list__item {
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+.info-list__item:last-child {
+  margin-bottom: 0;
+}
+.footer__social-list {
+  display: flex;
+}
+.social-list__item {
+  margin-right: 16px;
+}
+.social-list__item:last-child {
+  margin-right: 0;
+}
+@media (max-width: 880px) {
+  .container {
+    padding: 0 10px;
+  }
+  .header__button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .header__button-change {
+    width: 220px;
+    height: 45px;
+    font-size: 14px;
+    margin-right: 0;
+  }
+  .header__button-gender {
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
+    margin-right: 0;
+  }
+  .info-list__item {
+    font-size: 12px;
+  }
+}
